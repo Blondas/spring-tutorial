@@ -8,10 +8,20 @@
        ">
 
 
-    <bean id="logger" class="org.krisdrum.spring.test.tutorial.Logger">
+    <bean id="logger"
+          class="org.krisdrum.spring.test.tutorial.Logger">
     </bean>
 
-    <bean id="fileWriter"
+    <bean id="consoleWriter"
+          class="org.krisdrum.spring.test.tutorial.ConsoleWriter">
+        <qualifier value="toconsole"></qualifier>
+    </bean>
+
+    <bean id="squirrel"
+          class="org.krisdrum.spring.test.tutorial.ConsoleWriter">
+    </bean>
+
+    <bean id="mongoose"
           class="org.krisdrum.spring.test.tutorial.FileWriter">
     </bean>
 
