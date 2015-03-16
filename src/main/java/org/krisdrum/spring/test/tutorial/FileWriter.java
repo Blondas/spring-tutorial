@@ -1,4 +1,4 @@
-package org.krisdrum.spring.test.tutorial24;
+package org.krisdrum.spring.test.tutorial;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 
