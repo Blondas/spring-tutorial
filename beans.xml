@@ -11,11 +11,6 @@
     <bean id="logger" class="org.krisdrum.spring.test.tutorial.Logger">
     </bean>
 
-    <bean id="consoleWriter"
-          class="org.krisdrum.spring.test.tutorial.ConsoleWriter">
-    </bean>
-
-
     <bean id="fileWriter"
           class="org.krisdrum.spring.test.tutorial.FileWriter">
     </bean>
