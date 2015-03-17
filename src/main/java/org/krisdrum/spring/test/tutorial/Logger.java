@@ -1,21 +1,18 @@
 package org.krisdrum.spring.test.tutorial;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import javax.annotation.Resource;
 
 public class Logger {
     private ConsoleWriter consoleWriter;
     private LogWriter fileWriter;
 
-    @Autowired
-    @Qualifier("toconsole")
+    @Resource
     public void setConsoleWriter(ConsoleWriter consoleWriter) {
         this.consoleWriter = consoleWriter;
     }
 
-    @Autowired
-    @Qualifier("filewriter")
+    @Resource(name = "squirrel")
     public void setFileWriter(LogWriter fileWriter) {
         this.fileWriter = fileWriter;
     }
