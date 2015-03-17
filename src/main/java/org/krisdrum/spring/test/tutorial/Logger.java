@@ -1,6 +1,8 @@
 package org.krisdrum.spring.test.tutorial;
 
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 
 public class Logger {
@@ -25,5 +27,16 @@ public class Logger {
         if (consoleWriter != null) {
             consoleWriter.write(text);
         }
+    }
+
+    @PostConstruct
+    public void init() {
+        System.out.println("init run");
+    }
+
+    @PreDestroy
+    public void destroy() {
+        System.out.println("destroy run");
+
     }
 }
